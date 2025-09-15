@@ -20,5 +20,8 @@ All command for use to setup this project
 -`npm install @mui/material @emotion/react @emotion/styled` for install material ui in this project 
 -` npm install @fontsource/roboto ` intall font by material ui 
 -` npm install @mui/icons-material` install icons in project by material ui
-
+<!-- -`npm install -D tailwindcss postcss autoprefixer` Install Tailwind CSS, PostCSS, and Autoprefixer as development dependencies. PostCSS is a tool for transforming CSS with JavaScript plugins, and Autoprefixer adds vendor prefixes to CSS rules.
+-`npx tailwindcss init -p`Generate the tailwind.config.js and postcss.config.js files using the Tailwind CSS CLI.
+-`
+` -->
             

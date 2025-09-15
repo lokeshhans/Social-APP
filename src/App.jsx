@@ -1,10 +1,12 @@
 import './App.css'
+import SocialApp from './Components/SocialApp'
 
 function App() {
 
   return (
     <>
-      Welcome
+      Welcome <br />
+       <SocialApp /> {/* Render the social app */}
     </>
   )
 }
