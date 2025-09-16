@@ -11,10 +11,10 @@ import axios from 'axios';
 export default function UserList() {
   const [users, setUsers] = useState([]);
   useEffect(()=>{
-        axios.get("https://dummyjson.com/users")
+        axios.get("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/users")
         .then(res =>{
-            const data = res.data.users
-            console.log(data);
+            const data = res.data
+            // console.log(res);
             setUsers([...data])
         })
   },[])
@@ -23,7 +23,7 @@ export default function UserList() {
   return (
     <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {users.map((user) => {
-        const labelId = `checkbox-list-secondary-label-${user.is}`;
+        const labelId = `checkbox-list-secondary-label-${user.id}`;
         return (
           <ListItem
             key={user.id}
@@ -33,10 +33,10 @@ export default function UserList() {
               <ListItemAvatar>
                 <Avatar
                   alt={`Avatar n°${user.firstName}`}
-                  src={user.image}
+                  src={user.avatar}
                 />
               </ListItemAvatar>
-              <ListItemText id={labelId} primary={user.firstName + " " + user.lastName} />
+              <ListItemText id={labelId} primary={user.name } />
             </ListItemButton>
           </ListItem>
         );

@@ -172,22 +172,23 @@ function PostCardList() {
   // ];
   const [posts, setPosts] = useState([])
   useEffect(()=>{
-    axios.get("https://dummyjson.com/products")
+    axios.get("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/posts")
     .then(res => {
-      const data = res.data.products;
-      setPosts([...data])
-      console.log(data)
+      const postResponse = res.data;
+      setPosts([...postResponse])
+      // console.log(postResponse)
     })
   }, [])
-  return posts.map((post) => (
+  return ((posts.length == 0) ? "Loading....." : posts.map((post) => (
     <PostCard
-      authorFirstName={post.category}
-      title={post.title}
+      authorFirstName={post.name}
+      title={post.name}
       content={post.description}
-      image={post.images}
+      image={post.avatar}
       key={post.id}
+      createdAt={post.createdAt}
     />
-  ));
+  )));
 }
 
 export default PostCardList;

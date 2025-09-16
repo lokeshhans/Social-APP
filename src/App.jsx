@@ -5,7 +5,6 @@ function App() {
 
   return (
     <>
-      Welcome <br />
        <SocialApp /> {/* Render the social app */}
     </>
   )
