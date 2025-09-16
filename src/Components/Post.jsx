@@ -12,7 +12,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function PostCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 750 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -24,7 +24,7 @@ export default function PostCard() {
       />
       <CardMedia
         component="img"
-        height="194"
+        height="350"
         image="https://plus.unsplash.com/premium_photo-1661771822467-e516ca075314?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Paella dish"
       />

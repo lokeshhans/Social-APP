@@ -1,14 +1,13 @@
 import React from 'react'
 import PostCard from './Post'
+import Navbar from './NavBar'
+import MainContainer from './MainContainer/MainContainer'
 
 function SocialApp() {
   return (
     <div>
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
+      <Navbar />
+      <MainContainer />
     </div>
   )
 }
