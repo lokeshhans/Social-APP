@@ -9,10 +9,10 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 
-export default function PostCard({authorFirstName, title, image, content,createdAt}) {
+ function PostCard({authorFirstName, title, image, content,createdAt}) {
   const [isLike, setIsLike] = useState(false)
   return (
     <Card sx={{ maxWidth: 750 }}>
@@ -45,4 +45,6 @@ export default function PostCard({authorFirstName, title, image, content,created
       </CardActions>
     </Card>
   );
+  
 }
+export default React.memo(PostCard)

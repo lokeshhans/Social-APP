@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PostCard from "../Post";
-import axios from "axios";
-
+import PostCardContext from '../../Provider/PostProvider'
 function PostCardList() {
   // const array = [
   //   {
@@ -170,15 +169,8 @@ function PostCardList() {
   //       "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp",
   //   },
   // ];
-  const [posts, setPosts] = useState([])
-  useEffect(()=>{
-    axios.get("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/posts")
-    .then(res => {
-      const postResponse = res.data;
-      setPosts([...postResponse])
-      // console.log(postResponse)
-    })
-  }, [])
+  const {posts} = useContext(PostCardContext)
+  
   return ((posts.length == 0) ? "Loading....." : posts.map((post) => (
     <PostCard
       authorFirstName={post.name}

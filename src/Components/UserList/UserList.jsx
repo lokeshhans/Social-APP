@@ -5,21 +5,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import { useState,useEffect } from 'react';
-import axios from 'axios';
+import PostCardContext from '../../Provider/PostProvider'
 
 export default function UserList() {
-  const [users, setUsers] = useState([]);
-  useEffect(()=>{
-        axios.get("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/users")
-        .then(res =>{
-            const data = res.data
-            // console.log(res);
-            setUsers([...data])
-        })
-  },[])
-
-
+  const {users, setUsers} = React.useContext(PostCardContext);
   return (
     <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {users.map((user) => {
