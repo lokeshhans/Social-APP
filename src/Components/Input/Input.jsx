@@ -35,7 +35,7 @@ const {users, setUsers} = useContext(PostCardContext)
   async function createUser() {
     setLoading(true);
     axios
-      .post("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/users", {
+      .post("https://68c98f84ceef5a150f655294.mockapi.io/api/v1/users",{
         name: postText,
         avatar: postImg,
       })
