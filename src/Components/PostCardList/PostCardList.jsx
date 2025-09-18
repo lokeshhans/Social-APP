@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import PostCard from "../Post";
 import PostCardContext from '../../Provider/PostProvider'
 function PostCardList() {

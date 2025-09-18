@@ -1,11 +1,15 @@
 import './App.css'
-import SocialApp from './Components/SocialApp'
+import Navbar from './Components/NavBar'
+// import SocialApp from './Components/SocialApp'
+import CustomRouter from './CustomRouter/CustomRouter'
 
 function App() {
 
   return (
     <>
-       <SocialApp /> {/* Render the social app */}
+      <Navbar />
+       {/* <SocialApp /> Render the social app */}
+      <CustomRouter />
     </>
   )
 }
